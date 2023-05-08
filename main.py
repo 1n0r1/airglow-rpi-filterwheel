@@ -5,13 +5,13 @@ import logging
 import time
 from datetime import datetime
 
-logging.basicConfig(filename='./logs/' + datetime.now().strftime('_%Y%m%d_%H%M%S.log'), 
+logging.basicConfig(filename='/home/airglow/airglow-rpi-filterwheel/logs/' + datetime.now().strftime('_%Y%m%d_%H%M%S.log'), 
                     format='%(asctime)s %(message)s', 
                     encoding='utf-8', 
                     level=logging.DEBUG)
                     
 logging.info('Listener start')
-
+print("Listener start")
 ser = serial.Serial(
     port="/dev/serial0", 
     baudrate=9600,
