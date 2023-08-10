@@ -15,6 +15,16 @@ RDP to RPi need to be from a different user `airglowrdp` and not the default one
 
 Delete the command that use serial0 on RPi:
 
+# For Serial Communication
 `sudo nano /boot/cmdline.txt`
 
 and ONLY delete `console=serial0,115200`, keep the rest of the line unchanged
+
+Run:
+
+`python3 main.py`
+
+# For Network Communication
+Run:
+
+`python3 main_network.py`
