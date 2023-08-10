@@ -8,7 +8,7 @@ from time import sleep
 
 from filterwheel import FilterWheel
 
-logging.basicConfig(filename='/home/airglow/airglow-rpi-filterwheel/logs/' + datetime.now().strftime('_%Y%m%d_%H%M%S.log'), 
+logging.basicConfig(filename='/home/airglow/airglow/airglow-rpi-filterwheel/logs/' + datetime.now().strftime('_%Y%m%d_%H%M%S.log'), 
                     format='%(asctime)s %(message)s', 
                     encoding='utf-8', 
                     level=logging.DEBUG)
@@ -60,4 +60,4 @@ def go(pos):
 if __name__ == '__main__':
     logging.info('Listener start')
     print("Listener start")
-    app.run(debug=True, port=80, host='0.0.0.0')
+    app.run(debug=True, port=8080, host='0.0.0.0')
